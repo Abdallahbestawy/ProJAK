@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProJAK.EntityFramework\ProJAK.EntityFramework.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -10,6 +10,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Tools": "6.0.33",
           "ProJAK.EntityFramework": "1.0.0",
+          "ProJAK.Repository": "1.0.0",
+          "ProJAK.Service": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -566,6 +568,22 @@
         "runtime": {
           "ProJAK.EntityFramework.dll": {}
         }
+      },
+      "ProJAK.Repository/1.0.0": {
+        "dependencies": {
+          "ProJAK.EntityFramework": "1.0.0"
+        },
+        "runtime": {
+          "ProJAK.Repository.dll": {}
+        }
+      },
+      "ProJAK.Service/1.0.0": {
+        "dependencies": {
+          "ProJAK.Repository": "1.0.0"
+        },
+        "runtime": {
+          "ProJAK.Service.dll": {}
+        }
       }
     }
   },
@@ -959,6 +977,16 @@
       "sha512": ""
     },
     "ProJAK.EntityFramework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProJAK.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProJAK.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

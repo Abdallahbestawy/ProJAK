@@ -979,6 +979,32 @@
         "runtime": {
           "bin/placeholder/ProJAK.EntityFramework.dll": {}
         }
+      },
+      "ProJAK.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ProJAK.EntityFramework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProJAK.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProJAK.Repository.dll": {}
+        }
+      },
+      "ProJAK.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ProJAK.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProJAK.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProJAK.Service.dll": {}
+        }
       }
     }
   },
@@ -2426,12 +2452,24 @@
       "type": "project",
       "path": "../ProJAK.EntityFramework/ProJAK.EntityFramework.csproj",
       "msbuildProject": "../ProJAK.EntityFramework/ProJAK.EntityFramework.csproj"
+    },
+    "ProJAK.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ProJAK.Repository/ProJAK.Repository.csproj",
+      "msbuildProject": "../ProJAK.Repository/ProJAK.Repository.csproj"
+    },
+    "ProJAK.Service/1.0.0": {
+      "type": "project",
+      "path": "../ProJAK.Service/ProJAK.Service.csproj",
+      "msbuildProject": "../ProJAK.Service/ProJAK.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.33",
       "ProJAK.EntityFramework >= 1.0.0",
+      "ProJAK.Repository >= 1.0.0",
+      "ProJAK.Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -2469,6 +2507,12 @@
           "projectReferences": {
             "E:\\e_commerce\\ProJAK\\ProJAK.EntityFramework\\ProJAK.EntityFramework.csproj": {
               "projectPath": "E:\\e_commerce\\ProJAK\\ProJAK.EntityFramework\\ProJAK.EntityFramework.csproj"
+            },
+            "E:\\e_commerce\\ProJAK\\ProJAK.Repository\\ProJAK.Repository.csproj": {
+              "projectPath": "E:\\e_commerce\\ProJAK\\ProJAK.Repository\\ProJAK.Repository.csproj"
+            },
+            "E:\\e_commerce\\ProJAK\\ProJAK.Service\\ProJAK.Service.csproj": {
+              "projectPath": "E:\\e_commerce\\ProJAK\\ProJAK.Service\\ProJAK.Service.csproj"
             }
           }
         }

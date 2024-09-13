@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using ProJAK.EntityFramework.DataBaseContext;
+using ProJAK.Repository.Repository;
+using ProJAK.Service.IService;
+using ProJAK.Service.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
 b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+// interjection
+builder.Services.AddTransient<UnitOfWork>();
+builder.Services.AddTransient<IManufacturerService, ManufacturerService>();
 
 var app = builder.Build();
 

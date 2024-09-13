@@ -70,3 +70,7 @@ E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.Domain.dll
 E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.EntityFramework.dll
 E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.EntityFramework.pdb
 E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.Domain.pdb
+E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.Repository.dll
+E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.Service.dll
+E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.Repository.pdb
+E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.Service.pdb

@@ -10,3 +10,8 @@ E:\e_commerce\ProJAK\ProJAK.Repository\obj\Debug\net6.0\ProJAK.Repository.dll
 E:\e_commerce\ProJAK\ProJAK.Repository\obj\Debug\net6.0\refint\ProJAK.Repository.dll
 E:\e_commerce\ProJAK\ProJAK.Repository\obj\Debug\net6.0\ProJAK.Repository.pdb
 E:\e_commerce\ProJAK\ProJAK.Repository\obj\Debug\net6.0\ref\ProJAK.Repository.dll
+E:\e_commerce\ProJAK\ProJAK.Repository\bin\Debug\net6.0\ProJAK.Domain.dll
+E:\e_commerce\ProJAK\ProJAK.Repository\bin\Debug\net6.0\ProJAK.EntityFramework.dll
+E:\e_commerce\ProJAK\ProJAK.Repository\bin\Debug\net6.0\ProJAK.EntityFramework.pdb
+E:\e_commerce\ProJAK\ProJAK.Repository\bin\Debug\net6.0\ProJAK.Domain.pdb
+E:\e_commerce\ProJAK\ProJAK.Repository\obj\Debug\net6.0\ProJAK.Repository.csproj.CopyComplete
