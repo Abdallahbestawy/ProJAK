@@ -1,0 +1,17 @@
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\ProJAK.EntityFramework.csproj.AssemblyReference.cache
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\ProJAK.EntityFramework.GeneratedMSBuildEditorConfig.editorconfig
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\ProJAK.EntityFramework.AssemblyInfoInputs.cache
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\ProJAK.EntityFramework.AssemblyInfo.cs
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\ProJAK.EntityFramework.csproj.CoreCompileInputs.cache
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\bin\Debug\net6.0\ProJAK.EntityFramework.deps.json
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\bin\Debug\net6.0\ProJAK.EntityFramework.runtimeconfig.json
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\bin\Debug\net6.0\ProJAK.EntityFramework.dll
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\bin\Debug\net6.0\ProJAK.EntityFramework.pdb
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\bin\Debug\net6.0\ProJAK.Domain.dll
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\bin\Debug\net6.0\ProJAK.Domain.pdb
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\ProJAK.EntityFramework.csproj.CopyComplete
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\ProJAK.EntityFramework.dll
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\refint\ProJAK.EntityFramework.dll
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\ProJAK.EntityFramework.pdb
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\ProJAK.EntityFramework.genruntimeconfig.cache
+E:\e_commerce\ProJAK\ProJAK.EntityFramework\obj\Debug\net6.0\ref\ProJAK.EntityFramework.dll

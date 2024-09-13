@@ -1,0 +1,12 @@
+E:\e_commerce\ProJAK\ProJAK.Domain\bin\Debug\net6.0\ProJAK.Domain.deps.json
+E:\e_commerce\ProJAK\ProJAK.Domain\bin\Debug\net6.0\ProJAK.Domain.dll
+E:\e_commerce\ProJAK\ProJAK.Domain\bin\Debug\net6.0\ProJAK.Domain.pdb
+E:\e_commerce\ProJAK\ProJAK.Domain\obj\Debug\net6.0\ProJAK.Domain.csproj.AssemblyReference.cache
+E:\e_commerce\ProJAK\ProJAK.Domain\obj\Debug\net6.0\ProJAK.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\e_commerce\ProJAK\ProJAK.Domain\obj\Debug\net6.0\ProJAK.Domain.AssemblyInfoInputs.cache
+E:\e_commerce\ProJAK\ProJAK.Domain\obj\Debug\net6.0\ProJAK.Domain.AssemblyInfo.cs
+E:\e_commerce\ProJAK\ProJAK.Domain\obj\Debug\net6.0\ProJAK.Domain.csproj.CoreCompileInputs.cache
+E:\e_commerce\ProJAK\ProJAK.Domain\obj\Debug\net6.0\ProJAK.Domain.dll
+E:\e_commerce\ProJAK\ProJAK.Domain\obj\Debug\net6.0\refint\ProJAK.Domain.dll
+E:\e_commerce\ProJAK\ProJAK.Domain\obj\Debug\net6.0\ProJAK.Domain.pdb
+E:\e_commerce\ProJAK\ProJAK.Domain\obj\Debug\net6.0\ref\ProJAK.Domain.dll
