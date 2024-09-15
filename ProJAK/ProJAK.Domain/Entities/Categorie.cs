@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ProJAK.Domain.Enum;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProJAK.Domain.Entities
@@ -11,8 +12,6 @@ namespace ProJAK.Domain.Entities
         [Required]
         [MinLength(5)]
         public string Name { get; set; }
-        [ForeignKey("SubCategorie")]
-        public Guid? SubCategorieId { get; set; }
-        public Categorie? SubCategorie { get; set; }
+        public CategorieType CategorieType { get; set; }
     }
 }

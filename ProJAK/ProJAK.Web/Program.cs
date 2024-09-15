@@ -19,6 +19,7 @@ b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 // interjection
 builder.Services.AddTransient<UnitOfWork>();
 builder.Services.AddTransient<IManufacturerService, ManufacturerService>();
+builder.Services.AddTransient<ICategorieService, CategorieService>();
 
 var app = builder.Build();
 

@@ -17,3 +17,5 @@ E:\e_commerce\ProJAK\ProJAK.Service\bin\Debug\net6.0\ProJAK.Repository.pdb
 E:\e_commerce\ProJAK\ProJAK.Service\bin\Debug\net6.0\ProJAK.Domain.pdb
 E:\e_commerce\ProJAK\ProJAK.Service\bin\Debug\net6.0\ProJAK.EntityFramework.pdb
 E:\e_commerce\ProJAK\ProJAK.Service\obj\Debug\net6.0\ProJAK.Service.csproj.CopyComplete
+E:\e_commerce\ProJAK\ProJAK.Service\bin\Debug\net6.0\ProJAK.ResponseHandler.dll
+E:\e_commerce\ProJAK\ProJAK.Service\bin\Debug\net6.0\ProJAK.ResponseHandler.pdb

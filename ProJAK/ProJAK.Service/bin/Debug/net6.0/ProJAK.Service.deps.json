@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "ProJAK.Service/1.0.0": {
         "dependencies": {
-          "ProJAK.Repository": "1.0.0"
+          "ProJAK.Repository": "1.0.0",
+          "ProJAK.ResponseHandler": "1.0.0"
         },
         "runtime": {
           "ProJAK.Service.dll": {}
@@ -544,6 +545,11 @@
         "runtime": {
           "ProJAK.Repository.dll": {}
         }
+      },
+      "ProJAK.ResponseHandler/1.0.0": {
+        "runtime": {
+          "ProJAK.ResponseHandler.dll": {}
+        }
       }
     }
   },
@@ -879,6 +885,11 @@
       "sha512": ""
     },
     "ProJAK.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProJAK.ResponseHandler/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

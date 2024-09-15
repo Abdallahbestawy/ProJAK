@@ -993,11 +993,22 @@
           "bin/placeholder/ProJAK.Repository.dll": {}
         }
       },
+      "ProJAK.ResponseHandler/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ProJAK.ResponseHandler.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProJAK.ResponseHandler.dll": {}
+        }
+      },
       "ProJAK.Service/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "ProJAK.Repository": "1.0.0"
+          "ProJAK.Repository": "1.0.0",
+          "ProJAK.ResponseHandler": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ProJAK.Service.dll": {}
@@ -2457,6 +2468,11 @@
       "type": "project",
       "path": "../ProJAK.Repository/ProJAK.Repository.csproj",
       "msbuildProject": "../ProJAK.Repository/ProJAK.Repository.csproj"
+    },
+    "ProJAK.ResponseHandler/1.0.0": {
+      "type": "project",
+      "path": "../ProJAK.ResponseHandler/ProJAK.ResponseHandler.csproj",
+      "msbuildProject": "../ProJAK.ResponseHandler/ProJAK.ResponseHandler.csproj"
     },
     "ProJAK.Service/1.0.0": {
       "type": "project",

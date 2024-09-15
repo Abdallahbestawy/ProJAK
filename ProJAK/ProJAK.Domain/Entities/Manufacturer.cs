@@ -12,5 +12,6 @@ namespace ProJAK.Domain.Entities
         public string Name { get; set; }
         public virtual ICollection<GraphicsCard> GraphicsCards { get; set; } = new List<GraphicsCard>();
         public virtual ICollection<Processor> Processors { get; set; } = new List<Processor>();
+        public virtual ICollection<Product> Products { get; set; } = new List<Product>();
     }
 }

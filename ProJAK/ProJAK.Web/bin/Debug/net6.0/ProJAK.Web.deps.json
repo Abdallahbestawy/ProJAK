@@ -577,9 +577,15 @@
           "ProJAK.Repository.dll": {}
         }
       },
+      "ProJAK.ResponseHandler/1.0.0": {
+        "runtime": {
+          "ProJAK.ResponseHandler.dll": {}
+        }
+      },
       "ProJAK.Service/1.0.0": {
         "dependencies": {
-          "ProJAK.Repository": "1.0.0"
+          "ProJAK.Repository": "1.0.0",
+          "ProJAK.ResponseHandler": "1.0.0"
         },
         "runtime": {
           "ProJAK.Service.dll": {}
@@ -982,6 +988,11 @@
       "sha512": ""
     },
     "ProJAK.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProJAK.ResponseHandler/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

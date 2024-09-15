@@ -179,16 +179,14 @@ namespace ProJAK.EntityFramework.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("CategorieType")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("SubCategorieId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("SubCategorieId");
 
                     b.ToTable("Categories");
                 });
@@ -358,6 +356,9 @@ namespace ProJAK.EntityFramework.Migrations
                     b.Property<int?>("HardSize")
                         .HasColumnType("int");
 
+                    b.Property<Guid>("ManufacturerId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -388,6 +389,8 @@ namespace ProJAK.EntityFramework.Migrations
                     b.HasIndex("GraphicsCardId");
 
                     b.HasIndex("HardId");
+
+                    b.HasIndex("ManufacturerId");
 
                     b.HasIndex("ProcessorId");
 
@@ -612,15 +615,6 @@ namespace ProJAK.EntityFramework.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("ProJAK.Domain.Entities.Categorie", b =>
-                {
-                    b.HasOne("ProJAK.Domain.Entities.Categorie", "SubCategorie")
-                        .WithMany()
-                        .HasForeignKey("SubCategorieId");
-
-                    b.Navigation("SubCategorie");
-                });
-
             modelBuilder.Entity("ProJAK.Domain.Entities.GraphicsCard", b =>
                 {
                     b.HasOne("ProJAK.Domain.Entities.Manufacturer", "Manufacturer")
@@ -700,6 +694,12 @@ namespace ProJAK.EntityFramework.Migrations
                         .WithMany("Products")
                         .HasForeignKey("HardId");
 
+                    b.HasOne("ProJAK.Domain.Entities.Manufacturer", "Manufacturer")
+                        .WithMany("Products")
+                        .HasForeignKey("ManufacturerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ProJAK.Domain.Entities.Processor", "Processor")
                         .WithMany("Products")
                         .HasForeignKey("ProcessorId");
@@ -713,6 +713,8 @@ namespace ProJAK.EntityFramework.Migrations
                     b.Navigation("GraphicsCard");
 
                     b.Navigation("Hard");
+
+                    b.Navigation("Manufacturer");
 
                     b.Navigation("Processor");
 
@@ -777,6 +779,8 @@ namespace ProJAK.EntityFramework.Migrations
                     b.Navigation("GraphicsCards");
 
                     b.Navigation("Processors");
+
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("ProJAK.Domain.Entities.Order", b =>

@@ -1,0 +1,12 @@
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\bin\Debug\net6.0\ProJAK.ResponseHandler.deps.json
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\bin\Debug\net6.0\ProJAK.ResponseHandler.dll
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\bin\Debug\net6.0\ProJAK.ResponseHandler.pdb
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\obj\Debug\net6.0\ProJAK.ResponseHandler.csproj.AssemblyReference.cache
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\obj\Debug\net6.0\ProJAK.ResponseHandler.GeneratedMSBuildEditorConfig.editorconfig
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\obj\Debug\net6.0\ProJAK.ResponseHandler.AssemblyInfoInputs.cache
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\obj\Debug\net6.0\ProJAK.ResponseHandler.AssemblyInfo.cs
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\obj\Debug\net6.0\ProJAK.ResponseHandler.csproj.CoreCompileInputs.cache
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\obj\Debug\net6.0\ProJAK.ResponseHandler.dll
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\obj\Debug\net6.0\refint\ProJAK.ResponseHandler.dll
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\obj\Debug\net6.0\ProJAK.ResponseHandler.pdb
+E:\e_commerce\ProJAK\ProJAK.ResponseHandler\obj\Debug\net6.0\ref\ProJAK.ResponseHandler.dll

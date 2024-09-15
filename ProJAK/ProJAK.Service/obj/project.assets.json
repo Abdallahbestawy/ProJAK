@@ -860,6 +860,16 @@
         "runtime": {
           "bin/placeholder/ProJAK.Repository.dll": {}
         }
+      },
+      "ProJAK.ResponseHandler/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ProJAK.ResponseHandler.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProJAK.ResponseHandler.dll": {}
+        }
       }
     }
   },
@@ -2131,11 +2141,17 @@
       "type": "project",
       "path": "../ProJAK.Repository/ProJAK.Repository.csproj",
       "msbuildProject": "../ProJAK.Repository/ProJAK.Repository.csproj"
+    },
+    "ProJAK.ResponseHandler/1.0.0": {
+      "type": "project",
+      "path": "../ProJAK.ResponseHandler/ProJAK.ResponseHandler.csproj",
+      "msbuildProject": "../ProJAK.ResponseHandler/ProJAK.ResponseHandler.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "ProJAK.Repository >= 1.0.0"
+      "ProJAK.Repository >= 1.0.0",
+      "ProJAK.ResponseHandler >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2172,6 +2188,9 @@
           "projectReferences": {
             "E:\\e_commerce\\ProJAK\\ProJAK.Repository\\ProJAK.Repository.csproj": {
               "projectPath": "E:\\e_commerce\\ProJAK\\ProJAK.Repository\\ProJAK.Repository.csproj"
+            },
+            "E:\\e_commerce\\ProJAK\\ProJAK.ResponseHandler\\ProJAK.ResponseHandler.csproj": {
+              "projectPath": "E:\\e_commerce\\ProJAK\\ProJAK.ResponseHandler\\ProJAK.ResponseHandler.csproj"
             }
           }
         }

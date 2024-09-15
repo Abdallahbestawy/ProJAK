@@ -16,51 +16,43 @@ namespace ProJAK.Web.Controllers
         }
 
         // Get manufacturer by ID
-        [HttpGet("{id:guid}")]
-        public async Task<IActionResult> GetManufacturerById(Guid id)
+        [HttpGet("{Id:guid}")]
+        public async Task<IActionResult> GetManufacturerById(Guid Id)
         {
-            var manufacturer = await _manufacturerService.GetManufacturerByIdAsync(id);
-            if (manufacturer == null)
-            {
-                return NotFound();
-            }
-            return Ok(manufacturer);
+            var response = await _manufacturerService.GetManufacturerByIdAsync(Id);
+            return StatusCode(response.StatusCode, response);
         }
-
+        [HttpGet("a")]
+        public async Task<IActionResult> GetAllManufacturer()
+        {
+            var response = await _manufacturerService.GetAllManufacturerAsync();
+            return StatusCode(response.StatusCode, response);
+        }
         // Add a new manufacturer
         [HttpPost]
         public async Task<IActionResult> AddManufacturer(ManufacturerDto addManufacturerDto)
         {
-            bool result = await _manufacturerService.AddManufacturerAsync(addManufacturerDto);
-            if (!result)
-            {
-                return BadRequest();
-            }
-            return Ok();
+            var response = await _manufacturerService.AddManufacturerAsync(addManufacturerDto);
+            return StatusCode(response.StatusCode, response);
+
         }
 
         // Update an existing manufacturer
         [HttpPut]
         public async Task<IActionResult> UpdateManufacturer(ManufacturerDto updateManufacturerDto)
         {
-            bool result = await _manufacturerService.UpdateManufacturerAsync(updateManufacturerDto);
-            if (!result)
-            {
-                return BadRequest();
-            }
-            return Ok();
+            var response = await _manufacturerService.UpdateManufacturerAsync(updateManufacturerDto);
+            return StatusCode(response.StatusCode, response);
+
         }
 
         // Delete a manufacturer by ID
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteManufacturer(Guid id)
         {
-            bool result = await _manufacturerService.DeleteManufacturerAsync(id);
-            if (!result)
-            {
-                return NotFound();
-            }
-            return Ok();
+            var response = await _manufacturerService.DeleteManufacturerAsync(id);
+            return StatusCode(response.StatusCode, response);
+
         }
     }
 }

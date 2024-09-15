@@ -18,6 +18,9 @@ namespace ProJAK.Domain.Entities
         [ForeignKey("Categorie")]
         public Guid CategorieId { get; set; }
         public virtual Categorie Categorie { get; set; }
+        [ForeignKey("Manufacturer")]
+        public Guid ManufacturerId { get; set; }
+        public virtual Manufacturer Manufacturer { get; set; }
         [ForeignKey("Screen")]
         public Guid? ScreenId { get; set; }
         public virtual Screen? Screen { get; set; }
