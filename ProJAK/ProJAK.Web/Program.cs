@@ -20,6 +20,7 @@ b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 builder.Services.AddTransient<UnitOfWork>();
 builder.Services.AddTransient<IManufacturerService, ManufacturerService>();
 builder.Services.AddTransient<ICategorieService, CategorieService>();
+builder.Services.AddTransient<IGraphicsCardService, GraphicsCardService>();
 
 var app = builder.Build();
 
