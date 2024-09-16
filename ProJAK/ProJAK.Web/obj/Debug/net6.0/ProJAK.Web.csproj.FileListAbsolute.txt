@@ -76,3 +76,5 @@ E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.Repository.pdb
 E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.Service.pdb
 E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.ResponseHandler.dll
 E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\ProJAK.ResponseHandler.pdb
+E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\e_commerce\ProJAK\ProJAK.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
