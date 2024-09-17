@@ -9,11 +9,18 @@ namespace ProJAK.Service.Service
 {
     public class GraphicsCardService : IGraphicsCardService
     {
+        #region fields
         private readonly IUnitOfWork _unitOfWork;
+        #endregion
+
+        #region ctor
         public GraphicsCardService(UnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
         }
+        #endregion
+
+        #region AddGraphicsCard
         public async Task<Response<object>> AddGraphicsCardAsync(GraphicsCardDto addGraphicsCardDto)
         {
             try
@@ -44,6 +51,9 @@ namespace ProJAK.Service.Service
                 return Response<object>.ServerError("An error occurred while adding the graphicsCard.", new List<string> { ex.Message });
             }
         }
+        #endregion
+
+        #region GetAllGraphicsCard
         public async Task<Response<List<GraphicsCardDto>>> GetAllGraphicsCardAsync()
         {
             try
@@ -67,7 +77,9 @@ namespace ProJAK.Service.Service
                 return Response<List<GraphicsCardDto>>.ServerError("An error occurred while get the graphicsCard.", new List<string> { ex.Message });
             }
         }
+        #endregion
 
+        #region GetGraphicsCardById
         public async Task<Response<GraphicsCardDto>> GetGraphicsCardByIdAsync(Guid graphicsCardId)
         {
             try
@@ -91,7 +103,9 @@ namespace ProJAK.Service.Service
                 return Response<GraphicsCardDto>.ServerError("An error occurred while get the graphicsCard.", new List<string> { ex.Message });
             }
         }
+        #endregion
 
+        #region UpdateGraphicsCard
         public async Task<Response<object>> UpdateGraphicsCardAsync(GraphicsCardDto updateGraphicsCardDto)
         {
             try
@@ -125,6 +139,9 @@ namespace ProJAK.Service.Service
                 return Response<object>.ServerError("An error occurred while update the graphicsCard.", new List<string> { ex.Message });
             }
         }
+        #endregion
+
+        #region DeleteGraphicsCard
         public async Task<Response<object>> DeleteGraphicsCardAsync(Guid graphicsCardId)
         {
             try
@@ -149,5 +166,6 @@ namespace ProJAK.Service.Service
                 return Response<object>.ServerError("An error occurred while delete the graphicsCard.", new List<string> { ex.Message });
             }
         }
+        #endregion
     }
 }

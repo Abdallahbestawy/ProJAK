@@ -8,12 +8,18 @@ namespace ProJAK.Web.Controllers
     [ApiController]
     public class CategorieController : ControllerBase
     {
+        #region fields
         private readonly ICategorieService _categorieService;
+        #endregion
 
+        #region ctor
         public CategorieController(ICategorieService categorieService)
         {
             _categorieService = categorieService;
         }
+        #endregion
+
+        #region AddCategorie
         [HttpPost]
         public async Task<IActionResult> AddCategorie(CategorieDto addCategorieDto)
         {
@@ -21,6 +27,9 @@ namespace ProJAK.Web.Controllers
 
             return StatusCode(response.StatusCode, response);
         }
+        #endregion
+
+        #region GetCategorieById
         [HttpGet("{Id:guid}")]
         public async Task<IActionResult> GetCategorieById(Guid Id)
         {
@@ -28,13 +37,18 @@ namespace ProJAK.Web.Controllers
             return StatusCode(response.StatusCode, response);
 
         }
+        #endregion
+
+        #region GetAllCategorie
         [HttpGet("a")]
         public async Task<IActionResult> GetAllCategorie()
         {
             var response = await _categorieService.GetAllCategorieAsync();
             return StatusCode(response.StatusCode, response);
-
         }
+        #endregion
+
+        #region UpdateCategorie
         [HttpPut]
         public async Task<IActionResult> UpdateCategorie(CategorieDto updateCategorieDto)
         {
@@ -42,6 +56,9 @@ namespace ProJAK.Web.Controllers
 
             return StatusCode(response.StatusCode, response);
         }
+        #endregion
+
+        #region DeleteCategorie
         [HttpDelete("{Id:guid}")]
         public async Task<IActionResult> DeleteCategorie(Guid Id)
         {
@@ -49,5 +66,6 @@ namespace ProJAK.Web.Controllers
             return StatusCode(response.StatusCode, response);
 
         }
+        #endregion
     }
 }

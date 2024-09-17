@@ -8,12 +8,18 @@ namespace ProJAK.Web.Controllers
     [ApiController]
     public class ManufacturerController : ControllerBase
     {
+        #region fields
         private readonly IManufacturerService _manufacturerService;
+        #endregion
 
+        #region ctor
         public ManufacturerController(IManufacturerService manufacturerService)
         {
             _manufacturerService = manufacturerService;
         }
+        #endregion
+
+        #region GetManufacturerById
 
         // Get manufacturer by ID
         [HttpGet("{Id:guid}")]
@@ -22,12 +28,18 @@ namespace ProJAK.Web.Controllers
             var response = await _manufacturerService.GetManufacturerByIdAsync(Id);
             return StatusCode(response.StatusCode, response);
         }
+        #endregion
+
+        #region GetAllManufacturer
         [HttpGet("a")]
         public async Task<IActionResult> GetAllManufacturer()
         {
             var response = await _manufacturerService.GetAllManufacturerAsync();
             return StatusCode(response.StatusCode, response);
         }
+        #endregion
+
+        #region AddManufacturer
         // Add a new manufacturer
         [HttpPost]
         public async Task<IActionResult> AddManufacturer(ManufacturerDto addManufacturerDto)
@@ -36,7 +48,9 @@ namespace ProJAK.Web.Controllers
             return StatusCode(response.StatusCode, response);
 
         }
+        #endregion
 
+        #region UpdateManufacturer
         // Update an existing manufacturer
         [HttpPut]
         public async Task<IActionResult> UpdateManufacturer(ManufacturerDto updateManufacturerDto)
@@ -45,7 +59,9 @@ namespace ProJAK.Web.Controllers
             return StatusCode(response.StatusCode, response);
 
         }
+        #endregion
 
+        #region DeleteManufacturer
         // Delete a manufacturer by ID
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteManufacturer(Guid id)
@@ -54,5 +70,6 @@ namespace ProJAK.Web.Controllers
             return StatusCode(response.StatusCode, response);
 
         }
+        #endregion
     }
 }

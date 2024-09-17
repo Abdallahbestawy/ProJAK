@@ -9,12 +9,18 @@ namespace ProJAK.Service.Service
 {
     public class ManufacturerService : IManufacturerService
     {
+        #region feilds
         private readonly IUnitOfWork _unitOfWork;
+        #endregion
+
+        #region ctor
         public ManufacturerService(UnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
         }
+        #endregion
 
+        #region AddManufacturer
         public async Task<Response<object>> AddManufacturerAsync(ManufacturerDto addManufacturerDto)
         {
             try
@@ -44,7 +50,9 @@ namespace ProJAK.Service.Service
 
             }
         }
+        #endregion
 
+        #region GetAllManufacturer
         public async Task<Response<List<ManufacturerDto>>> GetAllManufacturerAsync()
         {
             try
@@ -66,7 +74,9 @@ namespace ProJAK.Service.Service
                 return Response<List<ManufacturerDto>>.ServerError("An error occurred while get the manufacturer.", new List<string> { ex.Message });
             }
         }
+        #endregion
 
+        #region GetManufacturerById
         public async Task<Response<ManufacturerDto>> GetManufacturerByIdAsync(Guid manufacturerId)
         {
             try
@@ -88,7 +98,9 @@ namespace ProJAK.Service.Service
                 return Response<ManufacturerDto>.ServerError("An error occurred while get the manufacturer.", new List<string> { ex.Message });
             }
         }
+        #endregion
 
+        #region UpdateManufacturer
         public async Task<Response<object>> UpdateManufacturerAsync(ManufacturerDto updateManufacturerDto)
         {
             try
@@ -122,6 +134,9 @@ namespace ProJAK.Service.Service
 
             }
         }
+        #endregion
+
+        #region DeleteManufacturer
         public async Task<Response<object>> DeleteManufacturerAsync(Guid manufacturerId)
         {
             try
@@ -148,7 +163,7 @@ namespace ProJAK.Service.Service
                 return Response<object>.ServerError("An error occurred while delete the manufacturer.", new List<string> { ex.Message });
             }
         }
-
+        #endregion
 
     }
 }

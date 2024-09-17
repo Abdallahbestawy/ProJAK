@@ -8,11 +8,18 @@ namespace ProJAK.Web.Controllers
     [ApiController]
     public class AuthorizationController : ControllerBase
     {
+        #region fields
         private readonly IAuthenticationService _authenticationService;
+        #endregion
+
+        #region ctor
         public AuthorizationController(IAuthenticationService authenticationService)
         {
             _authenticationService = authenticationService;
         }
+        #endregion
+
+        #region RegisterUser
         [HttpPost("Register")]
         public async Task<IActionResult> RegisterUser(RegisterUserDto registerUserDto)
         {
@@ -20,6 +27,9 @@ namespace ProJAK.Web.Controllers
 
             return StatusCode(response.StatusCode, response);
         }
+        #endregion
+
+        #region AddAdmin
         [HttpPost("AddAdmin")]
         public async Task<IActionResult> AddAdmin(RegisterUserDto addAdminDto)
         {
@@ -27,6 +37,9 @@ namespace ProJAK.Web.Controllers
 
             return StatusCode(response.StatusCode, response);
         }
+        #endregion
+
+        #region GetAllUser
         [HttpGet("alluser")]
         public async Task<IActionResult> GetAllUser()
         {
@@ -34,6 +47,9 @@ namespace ProJAK.Web.Controllers
 
             return StatusCode(response.StatusCode, response);
         }
+        #endregion
+
+        #region GetAllAdmin
         [HttpGet("alladmin")]
         public async Task<IActionResult> GetAllAdmin()
         {
@@ -41,6 +57,9 @@ namespace ProJAK.Web.Controllers
 
             return StatusCode(response.StatusCode, response);
         }
+        #endregion
+
+        #region Login
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginUserDto loginUserDto)
         {
@@ -50,7 +69,9 @@ namespace ProJAK.Web.Controllers
                 return BadRequest(result.Message);
             return Ok(result);
         }
+        #endregion
 
+        #region RefreshToken
         [HttpGet("refreshToken")]
         public async Task<IActionResult> RefreshToken()
         {
@@ -62,6 +83,9 @@ namespace ProJAK.Web.Controllers
                 return BadRequest(result);
             return Ok(result);
         }
+        #endregion
+
+        #region RevokeToken
         [HttpPost("revokeToken")]
         public async Task<IActionResult> RevokeToken(RevokeTokenDto revokeToken)
         {
@@ -78,6 +102,9 @@ namespace ProJAK.Web.Controllers
             Response.Cookies.Delete("refreshToken");
             return Ok();
         }
+        #endregion
+
+        #region LogoutUser
         [HttpPost("Logout")]
         public async Task<IActionResult> LogoutUser()
         {
@@ -85,5 +112,6 @@ namespace ProJAK.Web.Controllers
 
             return StatusCode(response.StatusCode, response);
         }
+        #endregion
     }
 }

@@ -9,14 +9,18 @@ namespace ProJAK.Service.Service
 {
     public class CategorieService : ICategorieService
     {
-
+        #region fields
         private readonly IUnitOfWork _unitOfWork;
+        #endregion
+
+        #region ctor
         public CategorieService(UnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
         }
+        #endregion
 
-
+        #region AddCategorie
         public async Task<Response<object>> AddCategorieAsync(CategorieDto addCategorieDto)
         {
             try
@@ -46,9 +50,9 @@ namespace ProJAK.Service.Service
                 return Response<object>.ServerError("An error occurred while adding the category.", new List<string> { ex.Message });
             }
         }
+        #endregion
 
-
-
+        #region GetAllCategorie
         public async Task<Response<List<CategorieDto>>> GetAllCategorieAsync()
         {
             try
@@ -71,7 +75,9 @@ namespace ProJAK.Service.Service
                 return Response<List<CategorieDto>>.ServerError("An error occurred while get the category.", new List<string> { ex.Message });
             }
         }
+        #endregion
 
+        #region GetCategorieById
         public async Task<Response<CategorieDto>> GetCategorieByIdAsync(Guid categorieId)
         {
             try
@@ -95,6 +101,10 @@ namespace ProJAK.Service.Service
             }
 
         }
+
+        #endregion
+
+        #region UpdateCategorie
         public async Task<Response<object>> UpdateCategorieAsync(CategorieDto updateCategorieDto)
         {
             try
@@ -127,6 +137,9 @@ namespace ProJAK.Service.Service
                 return Response<object>.ServerError("An error occurred while update the category.", new List<string> { ex.Message });
             }
         }
+        #endregion
+
+        #region DeleteCategorie
         public async Task<Response<object>> DeleteCategorieAsync(Guid categorieId)
         {
             try
@@ -151,6 +164,7 @@ namespace ProJAK.Service.Service
                 return Response<object>.ServerError("An error occurred while delete the category.", new List<string> { ex.Message });
             }
         }
+        #endregion
 
 
     }
