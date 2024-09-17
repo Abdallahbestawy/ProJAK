@@ -42,7 +42,7 @@ namespace ProJAK.Service.Service
                     return Response<object>.BadRequest("Failed to save Hard.");
                 }
 
-                return Response<object>.Created("Category added successfully.");
+                return Response<object>.Created("Processor added successfully.");
             }
             catch (Exception ex)
             {

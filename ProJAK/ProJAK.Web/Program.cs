@@ -30,6 +30,7 @@ builder.Services.AddTransient<IGraphicsCardService, GraphicsCardService>();
 builder.Services.AddTransient<IAuthenticationService, AuthenticationService>();
 builder.Services.AddTransient<IReviewService, ReviewService>();
 builder.Services.AddTransient<IHardService, HardService>();
+builder.Services.AddTransient<IProcessorService, ProcessorService>();
 
 builder.Services.AddIdentity<User, IdentityRole>(options =>
 {
