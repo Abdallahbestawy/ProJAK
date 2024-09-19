@@ -32,6 +32,7 @@ builder.Services.AddTransient<IReviewService, ReviewService>();
 builder.Services.AddTransient<IHardService, HardService>();
 builder.Services.AddTransient<IProcessorService, ProcessorService>();
 builder.Services.AddTransient<IScreenService, ScreenService>();
+builder.Services.AddTransient<IProductService, ProductService>();
 
 
 
