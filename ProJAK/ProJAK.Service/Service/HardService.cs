@@ -42,7 +42,7 @@ namespace ProJAK.Service.Service
                     return Response<object>.BadRequest("Failed to save Hard.");
                 }
 
-                return Response<object>.Created("Processor added successfully.");
+                return Response<object>.Created("Hard added successfully.");
             }
             catch (Exception ex)
             {
@@ -50,7 +50,6 @@ namespace ProJAK.Service.Service
             }
         }
         #endregion
-
 
         #region GetAllHard
         public async Task<Response<List<HardDto>>> GetAllHardAsync()

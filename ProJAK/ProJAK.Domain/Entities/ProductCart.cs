@@ -13,6 +13,8 @@ namespace ProJAK.Domain.Entities
         public virtual Cart Cart { get; set; }
         [ForeignKey("Product")]
         public Guid ProductId { get; set; }
+        public int Quantity { get; set; }
         public virtual Product Product { get; set; }
+
     }
 }
