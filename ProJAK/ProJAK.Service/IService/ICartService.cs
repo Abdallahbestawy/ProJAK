@@ -9,6 +9,7 @@ namespace ProJAK.Service.IService
         Task<Response<GetCart>> GetCartByUserIdAsync(string userId);
         Task<Response<object>> UpdateCartAsync(List<CartDto> updateCartDto);
         Task<Response<object>> DeleteCartAsync(Guid CartId);
+        Task DeletProductCartsForUserAsync(string userId);
 
     }
 }

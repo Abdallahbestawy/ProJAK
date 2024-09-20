@@ -14,6 +14,7 @@ namespace ProJAK.Domain.Entities
         public virtual User User { get; set; }
         public DateTime OrderDate { get; set; }
         public StatusOrder StatusOrder { get; set; }
+        public decimal OrderAmount { get; set; }
         public virtual ICollection<OrderedProduct> OrderedProducts { get; set; } = new List<OrderedProduct>();
 
     }

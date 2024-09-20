@@ -140,5 +140,21 @@ namespace ProJAK.Service.Service
             }
         }
         #endregion
+
+        #region DeletProductCartsForUser
+        public async Task DeletProductCartsForUserAsync(string userId)
+        {
+            var oldCart = await _unitOfWork.ProductCarts.GetEntityByPropertyWithIncludeAsync
+                (
+                    p => p.Cart.UserId == userId,
+                    p => p.Cart
+                );
+            if (oldCart.Any())
+            {
+                await _unitOfWork.ProductCarts.DeleteRangeAsync(oldCart);
+                await _unitOfWork.SaveAsync();
+            }
+        }
+        #endregion
     }
 }

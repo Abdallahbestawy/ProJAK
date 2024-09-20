@@ -8,6 +8,8 @@ namespace ProJAK.Domain.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
+        public int Quantity { get; set; }
+        public decimal Price { get; set; }
         [ForeignKey("Product")]
         public Guid ProductId { get; set; }
         public Product Product { get; set; }
