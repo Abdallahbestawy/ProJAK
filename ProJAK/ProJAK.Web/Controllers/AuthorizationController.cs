@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ProJAK.Domain.Enum;
 using ProJAK.Service.DataTransferObject.AuthenticationDto;
 using ProJAK.Service.IService;
 
@@ -30,6 +32,7 @@ namespace ProJAK.Web.Controllers
         #endregion
 
         #region AddAdmin
+        [Authorize(Roles = nameof(UserType.Admin))]
         [HttpPost("AddAdmin")]
         public async Task<IActionResult> AddAdmin(RegisterUserDto addAdminDto)
         {
@@ -40,6 +43,7 @@ namespace ProJAK.Web.Controllers
         #endregion
 
         #region GetAllUser
+        [Authorize(Roles = nameof(UserType.Admin))]
         [HttpGet("alluser")]
         public async Task<IActionResult> GetAllUser()
         {
@@ -50,6 +54,7 @@ namespace ProJAK.Web.Controllers
         #endregion
 
         #region GetAllAdmin
+        [Authorize(Roles = nameof(UserType.Admin))]
         [HttpGet("alladmin")]
         public async Task<IActionResult> GetAllAdmin()
         {
@@ -105,6 +110,7 @@ namespace ProJAK.Web.Controllers
         #endregion
 
         #region LogoutUser
+        [Authorize]
         [HttpPost("Logout")]
         public async Task<IActionResult> LogoutUser()
         {

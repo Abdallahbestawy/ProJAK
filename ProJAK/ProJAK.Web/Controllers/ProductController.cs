@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ProJAK.Domain.Enum;
 using ProJAK.Service.DataTransferObject.ProductDto;
 using ProJAK.Service.IService;
 
@@ -20,6 +22,7 @@ namespace ProJAK.Web.Controllers
         #endregion
 
         #region AddProduct
+        [Authorize(Roles = nameof(UserType.Admin))]
         [HttpPost]
         public async Task<IActionResult> AddCategorie(ProductDto addProductDto)
         {
@@ -61,6 +64,7 @@ namespace ProJAK.Web.Controllers
         #endregion
 
         #region UpdateProduct
+        [Authorize(Roles = nameof(UserType.Admin))]
         [HttpPut]
         public async Task<IActionResult> UpdateProduct(ProductDto updateProductDto)
         {
@@ -71,6 +75,7 @@ namespace ProJAK.Web.Controllers
         #endregion
 
         #region DeleteProduct
+        [Authorize(Roles = nameof(UserType.Admin))]
         [HttpDelete("{Id:guid}")]
         public async Task<IActionResult> DeleteProduct(Guid Id)
         {

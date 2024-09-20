@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ProJAK.Domain.Enum;
 using ProJAK.Service.DataTransferObject.GraphicsCardDto;
 using ProJAK.Service.IService;
 
 namespace ProJAK.Web.Controllers
 {
+    [Authorize(Roles = nameof(UserType.Admin))]
     [Route("api/[controller]")]
     [ApiController]
     public class GraphicsCardController : ControllerBase

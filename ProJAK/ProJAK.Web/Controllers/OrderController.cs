@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ProJAK.Domain.Enum;
 using ProJAK.Service.DataTransferObject.OrderDto;
 using ProJAK.Service.IService;
 
@@ -10,27 +12,35 @@ namespace ProJAK.Web.Controllers
     {
         #region fields
         private readonly IOrderService _OrderService;
+        private readonly IHelpureService _helpureService;
         #endregion
 
         #region ctor
-        public OrderController(IOrderService OrderService)
+        public OrderController(IOrderService OrderService, IHelpureService helpureService)
         {
             _OrderService = OrderService;
+            _helpureService = helpureService;
         }
         #endregion
 
         #region AddOrder
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> AddCategorie(OrderDto addOrderDto)
         {
-            string userid = "5df8c5d5-35bd-4ebb-8a41-758083e246d1";
-            var response = await _OrderService.AddOrderAsync(userid, addOrderDto);
+            var currentUserId = await _helpureService.GetUserAsync(User);
+            if (currentUserId == null)
+            {
+                return Unauthorized();
+            }
+            var response = await _OrderService.AddOrderAsync(currentUserId, addOrderDto);
 
             return StatusCode(response.StatusCode, response);
         }
         #endregion
 
         #region GetOrderAdmin
+        [Authorize(Roles = nameof(UserType.Admin))]
         [HttpGet("a")]
         public async Task<IActionResult> GetOrderAdmin()
         {
@@ -40,16 +50,22 @@ namespace ProJAK.Web.Controllers
         #endregion
 
         #region GetOrderByUserId
+        [Authorize]
         [HttpGet("u")]
         public async Task<IActionResult> GetOrderByUserId()
         {
-            string userid = "5df8c5d5-35bd-4ebb-8a41-758083e246d1";
-            var response = await _OrderService.GetOrderByUserIdAsync(userid);
+            var currentUserId = await _helpureService.GetUserAsync(User);
+            if (currentUserId == null)
+            {
+                return Unauthorized();
+            }
+            var response = await _OrderService.GetOrderByUserIdAsync(currentUserId);
             return StatusCode(response.StatusCode, response);
         }
         #endregion
 
         #region GetOrderByOrderId
+        [Authorize]
         [HttpGet("{Id:guid}")]
         public async Task<IActionResult> GetOrderByOrderId(Guid Id)
         {
@@ -59,6 +75,7 @@ namespace ProJAK.Web.Controllers
         #endregion
 
         #region DeleteOrder
+        [Authorize]
         [HttpDelete("{Id:guid}")]
         public async Task<IActionResult> DeleteOrder(Guid Id)
         {

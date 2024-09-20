@@ -1,21 +1,25 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProJAK.Service.DataTransferObject.CartDto;
 using ProJAK.Service.IService;
 
 namespace ProJAK.Web.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CartController : ControllerBase
     {
         #region fields
         private readonly ICartService _CartService;
+        private readonly IHelpureService _HelpureService;
         #endregion
 
         #region ctor
-        public CartController(ICartService CartService)
+        public CartController(ICartService CartService, IHelpureService helpureService)
         {
             _CartService = CartService;
+            _HelpureService = helpureService;
         }
         #endregion
 
@@ -23,8 +27,12 @@ namespace ProJAK.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> AddCategorie(List<CartDto> addCartDto)
         {
-            string userid = "5df8c5d5-35bd-4ebb-8a41-758083e246d1";
-            var response = await _CartService.AddCartAsync(userid, addCartDto);
+            var currentUserId = await _HelpureService.GetUserAsync(User);
+            if (currentUserId == null)
+            {
+                return Unauthorized();
+            }
+            var response = await _CartService.AddCartAsync(currentUserId, addCartDto);
 
             return StatusCode(response.StatusCode, response);
         }
@@ -34,8 +42,12 @@ namespace ProJAK.Web.Controllers
         [HttpGet("u")]
         public async Task<IActionResult> GetCartByUserId()
         {
-            string userid = "5df8c5d5-35bd-4ebb-8a41-758083e246d1";
-            var response = await _CartService.GetCartByUserIdAsync(userid);
+            var currentUserId = await _HelpureService.GetUserAsync(User);
+            if (currentUserId == null)
+            {
+                return Unauthorized();
+            }
+            var response = await _CartService.GetCartByUserIdAsync(currentUserId);
             return StatusCode(response.StatusCode, response);
         }
         #endregion
