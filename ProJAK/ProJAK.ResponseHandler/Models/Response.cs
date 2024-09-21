@@ -53,7 +53,10 @@ namespace ProJAK.ResponseHandler.Models
         {
             return CreateResponse(ResponseType.NoContent, message, null, default);
         }
-
+        public static Response<T> NotFound(string message = "Not found.")
+        {
+            return new Response<T> { Succeeded = false, Message = message };
+        }
         public static Response<T> BadRequest(string? message = null, List<string>? errors = null)
         {
             return CreateResponse(ResponseType.BadRequest, message, errors, default);

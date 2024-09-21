@@ -274,6 +274,34 @@ namespace ProJAK.Service.Service
         }
         #endregion
 
+        #region ChangePassword
+        public async Task<Response<object>> ChangePasswordAsync(ChangePasswordDto changePasswordDto, string userId)
+        {
+            try
+            {
+                var user = await _userManager.FindByIdAsync(userId);
+                if (user == null)
+                {
+                    return Response<object>.NotFound("User not found.");
+                }
+
+                var changePasswordResult = await _userManager.ChangePasswordAsync(user, changePasswordDto.OldPassword, changePasswordDto.NewPassword);
+
+                if (!changePasswordResult.Succeeded)
+                {
+                    var errorMessages = changePasswordResult.Errors.Select(e => e.Description).ToList();
+                    return Response<object>.BadRequest("Password change failed.", errorMessages);
+                }
+
+                return Response<object>.Success("Password changed successfully.");
+            }
+            catch (Exception ex)
+            {
+                return Response<object>.ServerError("An error occurred while changing the password.", new List<string> { ex.Message });
+            }
+        }
+        #endregion
+
         #region private methods
 
         private async Task<JwtSecurityToken> CreateJwtToken(User user)

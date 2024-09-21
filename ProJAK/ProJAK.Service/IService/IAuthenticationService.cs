@@ -11,8 +11,10 @@ namespace ProJAK.Service.IService
         Task<Response<List<GetUserDto>>> GetAllAdminAsync();
         Task<AuthDto> LoginAsync(LoginUserDto loginUserDto);
         Task<AuthDto> RefreshTokenAsync(string token);
-        public Task<bool> RevokeTokenAsync(string token);
-        public Task<Response<string>> LogoutAsync();
+        Task<bool> RevokeTokenAsync(string token);
+        Task<Response<string>> LogoutAsync();
+        Task<Response<object>> ChangePasswordAsync(ChangePasswordDto changePasswordDto, string userId);
+
 
     }
 }

@@ -109,6 +109,18 @@ namespace ProJAK.Web.Controllers
         }
         #endregion
 
+        #region ChangePassword
+        [Authorize]
+        [HttpPost("ChangePassword")]
+        public async Task<IActionResult> ChangePassword(ChangePasswordDto changePasswordDto)
+        {
+            string userid = "220b7236-5290-4630-8d4d-71e9780d06a6";
+            var response = await _authenticationService.ChangePasswordAsync(changePasswordDto, userid);
+            return StatusCode(response.StatusCode, response);
+
+        }
+        #endregion
+
         #region LogoutUser
         [Authorize]
         [HttpPost("Logout")]
