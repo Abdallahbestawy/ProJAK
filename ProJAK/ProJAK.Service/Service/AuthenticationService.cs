@@ -274,6 +274,35 @@ namespace ProJAK.Service.Service
         }
         #endregion
 
+        #region GetUserByUserId
+        public async Task<Response<GetUserDto>> GetUserByUserIdAsync(string userId)
+        {
+            try
+            {
+                var user = await _userManager.FindByIdAsync(userId);
+                if (user == null)
+                {
+                    return Response<GetUserDto>.NotFound();
+                }
+                var userDto = new GetUserDto
+                {
+                    Id = user.Id,
+                    Name = user.Name,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber,
+                    Address = user.Address,
+                };
+
+                return Response<GetUserDto>.Success(userDto, "The data was successfully retrieved.");
+            }
+            catch (Exception ex)
+            {
+                return Response<GetUserDto>.ServerError("An error occurred while retrieving user.", new List<string> { ex.Message });
+
+            }
+        }
+        #endregion
+
         #region ChangePassword
         public async Task<Response<object>> ChangePasswordAsync(ChangePasswordDto changePasswordDto, string userId)
         {
